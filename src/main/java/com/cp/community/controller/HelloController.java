@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("hello")
 public class HelloController {
     @GetMapping("show")
+
     public String hello(@RequestParam(name = "name") String name, Model model) {
+        String names ="ahah";
         model.addAttribute("aa", name);
         return "hello";
     }
